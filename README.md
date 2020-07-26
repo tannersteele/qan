@@ -1,2 +1,2 @@
 # qan
-A modern take on note taking as a simple practice
+A modern take on note taking as a daily practice
