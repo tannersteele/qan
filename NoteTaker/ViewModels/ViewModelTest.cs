@@ -44,6 +44,7 @@ namespace NoteTaker
 
         private void OnShowNotes(object commandParameter)
         {
+            // Probably not the best way to do this - made a ticket for it
             new NotesViewer(new ObservableCollection<Note>(_currentNotes)).Show();
         }
 
