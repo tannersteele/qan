@@ -1,5 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
 
 namespace NoteTaker
