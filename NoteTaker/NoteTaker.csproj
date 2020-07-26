@@ -10,4 +10,8 @@
     <PackageReference Include="FluentWPF" Version="0.8.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+
 </Project>

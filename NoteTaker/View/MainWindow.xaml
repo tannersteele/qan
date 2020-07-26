@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0" HorizontalAlignment="Stretch">
             <TextBlock Margin="0,0,5,0">Take a note:</TextBlock>
-            <TextBox Width="Auto"/> <!-- TODO: capture input -->
+            <TextBox Text="{Binding Path=CurrentNoteFieldInput}" Width="Auto"/> <!-- TODO: capture input -->
         </DockPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right">
             <Button HorizontalAlignment="Right" Margin="0,0,5,0" Padding="2,3" Command="{Binding Path=SaveNoteCommand}" Content="Save Note" />
