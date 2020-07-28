@@ -18,17 +18,14 @@ namespace NoteTaker
             set => SetProperty(ref _currentNoteFieldInput, value);
         }
 
-        private readonly DelegateCommand _saveNoteCommand;
-        public ICommand SaveNoteCommand => _saveNoteCommand;
-
-        private readonly DelegateCommand _showNotesCommand;
-        public ICommand ShowNotesCommand => _showNotesCommand;
+        public ICommand SaveNoteCommand { get; }
+        public ICommand ShowNotesCommand { get;  }
 
         public ViewModelTest()
         {
             _currentNotes = new List<Note>();
-            _saveNoteCommand = new DelegateCommand(SaveNote, CanSaveNote);
-            _showNotesCommand = new DelegateCommand(ShowNotes, CanShowNotes);
+            SaveNoteCommand = new DelegateCommand(SaveNote, CanSaveNote);
+            ShowNotesCommand = new DelegateCommand(ShowNotes, CanShowNotes);
         }
 
         private void SaveNote()
