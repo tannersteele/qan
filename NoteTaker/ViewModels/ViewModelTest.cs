@@ -2,7 +2,6 @@
 using NoteTaker.Views;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace NoteTaker
@@ -35,6 +34,8 @@ namespace NoteTaker
                 Content = CurrentNoteFieldInput,
                 Timestamp = DateTime.Now
             });
+
+            CurrentNoteFieldInput = string.Empty;
         }
 
         private bool CanSaveNote() => true;
