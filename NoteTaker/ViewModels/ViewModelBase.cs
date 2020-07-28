@@ -33,6 +33,11 @@ namespace NoteTaker
             _canExecuteAction = canExecuteAction;
         }
 
+        public DelegateCommand(Action executeAction, Func<bool> canExecuteAction)
+            : this(o => executeAction(), o => canExecuteAction?.Invoke() ?? true)
+        {
+        }
+
         public void Execute(object parameter) => _executeAction(parameter);
 
         public bool CanExecute(object parameter) => _canExecuteAction?.Invoke(parameter) ?? true;

@@ -31,7 +31,7 @@ namespace NoteTaker
             _showNotesCommand = new DelegateCommand(ShowNotes, CanShowNotes);
         }
 
-        private void SaveNote(object commandParameter)
+        private void SaveNote()
         {
             _currentNotes.Add(new Note
             {
@@ -40,14 +40,14 @@ namespace NoteTaker
             });
         }
 
-        private bool CanSaveNote(object commandParameter) => true;
+        private bool CanSaveNote() => true;
 
-        private void ShowNotes(object commandParameter)
+        private void ShowNotes()
         {
             // Probably not the best way to do this - made a ticket for it
             new NotesViewer(new ObservableCollection<Note>(_currentNotes)).Show();
         }
 
-        private bool CanShowNotes(object commandParameter) => true;
+        private bool CanShowNotes() => true;
     }
 }
