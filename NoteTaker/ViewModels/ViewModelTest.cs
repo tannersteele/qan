@@ -41,8 +41,7 @@ namespace NoteTaker
 
         private void ShowNotes()
         {
-            // Probably not the best way to do this - made a ticket for it
-            new NotesViewer(new ObservableCollection<Note>(_currentNotes)).Show();
+            new NotesViewer(_currentNotes).ShowDialog();
         }
 
         private bool CanShowNotes() => true;

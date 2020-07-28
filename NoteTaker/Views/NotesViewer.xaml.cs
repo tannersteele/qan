@@ -1,6 +1,6 @@
 ﻿using NoteTaker.Models;
 using NoteTaker.ViewModels;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using System.Windows;
 
 namespace NoteTaker.Views
@@ -10,13 +10,9 @@ namespace NoteTaker.Views
     /// </summary>
     public partial class NotesViewer : Window
     {
-        public NotesViewer(ObservableCollection<Note> activeNotes)
+        public NotesViewer(IEnumerable<Note> activeNotes)
         {
-            DataContext = new NotesViewerViewModel()
-            {
-                CurrentNotes = activeNotes
-            };
-
+            DataContext = new NotesViewerViewModel(activeNotes);
             InitializeComponent();
         }
     }
