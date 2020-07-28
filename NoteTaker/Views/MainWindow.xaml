@@ -17,10 +17,10 @@
             <TextBlock Margin="0,0,5,0">Take a note:</TextBlock>
             <TextBox Text="{Binding Path=CurrentNoteFieldInput}" Width="Auto"/> <!-- TODO: capture input -->
         </DockPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right">
-            <Button HorizontalAlignment="Right" Margin="0,0,5,0" Padding="2,3" Command="{Binding SaveNoteCommand}" Content="Save Note" />
+        <UniformGrid Rows="1" Grid.Row="2" HorizontalAlignment="Right">
+            <Button HorizontalAlignment="Stretch" Margin="0,0,5,0" Padding="5,3" Command="{Binding SaveNoteCommand}" Content="Save Note" />
             <!-- disabled if no input -->
-            <Button HorizontalAlignment="Right" Padding="2,3" Command="{Binding ShowNotesCommand}" Content="Show All Notes" />
-        </StackPanel>
+            <Button HorizontalAlignment="Stretch" Padding="5,3" Command="{Binding ShowNotesCommand}" Content="Show All Notes" />
+        </UniformGrid>
     </Grid>
 </fw:AcrylicWindow>
