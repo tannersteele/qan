@@ -27,11 +27,11 @@ namespace NoteTaker
         public ViewModelTest()
         {
             _currentNotes = new List<Note>();
-            _saveNoteCommand = new DelegateCommand(OnNoteSaved, CanSaveNote);
-            _showNotesCommand = new DelegateCommand(OnShowNotes, CanShowNotes);
+            _saveNoteCommand = new DelegateCommand(SaveNote, CanSaveNote);
+            _showNotesCommand = new DelegateCommand(ShowNotes, CanShowNotes);
         }
 
-        private void OnNoteSaved(object commandParameter)
+        private void SaveNote(object commandParameter)
         {
             _currentNotes.Add(new Note
             {
@@ -42,7 +42,7 @@ namespace NoteTaker
 
         private bool CanSaveNote(object commandParameter) => true;
 
-        private void OnShowNotes(object commandParameter)
+        private void ShowNotes(object commandParameter)
         {
             // Probably not the best way to do this - made a ticket for it
             new NotesViewer(new ObservableCollection<Note>(_currentNotes)).Show();
