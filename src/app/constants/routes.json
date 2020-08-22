@@ -1,4 +1,5 @@
 {
-  "POPUP": "/",
+  "HOME": "/",
+  "POPUP": "/popup",
   "BROWSE": "/browse"
 }
