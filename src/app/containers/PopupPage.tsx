@@ -1,6 +1,6 @@
 import React from 'react';
-import Popup from '../components/popup/Popup';
+import NotePopup from '../components/popup/Popup';
 
 export default function PopupPage() {
-  return <Popup />;
+  return <NotePopup />;
 }
